@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Week6</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
+  <script src="index.js"></script>
 </head>
 <body>
-$END$
+<a-scene mindar-image="imageTargetSrc: ./marker/target.mind; maxTrack: 4"
+         vr-mode-ui="enabled: false"
+         device-orientation-permission-ui="enabled: false">
+
+  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+  <a-entity id="marker-a" mindar-image-target="targetIndex: 0">
+  </a-entity>
+
+  <a-entity id="marker-b" mindar-image-target="targetIndex: 1">
+  </a-entity>
+
+  <a-entity id="marker-c" mindar-image-target="targetIndex: 2">
+  </a-entity>
+
+  <a-entity id="marker-d" mindar-image-target="targetIndex: 3">
+  </a-entity>
+
+</a-scene>
 </body>
 </html>
